@@ -1,0 +1,39 @@
+/* Jacqueline Caragos — Portfolio styles */
+:root{--bg:#f3ecdc;--surface:#fbf7ec;--ink:#2f3a2c;--muted:#6b7561;--green:#5d7a4f;--green-d:#3f5a35;--line:#d8cfb8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1e2419;--surface:#283021;--ink:#ece6d3;--muted:#a3ad98;--green:#9bb88a;--green-d:#b6cfa6;--line:#3c4733;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1e2419;--surface:#283021;--ink:#ece6d3;--muted:#a3ad98;--green:#9bb88a;--green-d:#b6cfa6;--line:#3c4733;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Lato,system-ui,sans-serif;line-height:1.65}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:0;line-height:1.15}
+a{color:var(--green-d)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding:10px 16px}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:99px}
+nav a:hover{background:var(--surface);color:var(--green-d)}
+section{max-width:960px;margin:0 auto;padding:72px 22px 24px}
+.eyebrow{color:var(--green);letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;font-weight:700}
+h2{font-size:clamp(1.9rem,5vw,2.6rem);margin:6px 0 28px}
+h2 em{color:var(--green);font-style:italic}
+.hero{text-align:center;padding-top:90px;padding-bottom:70px}
+.hero h1{font-size:clamp(2.6rem,10vw,5rem);margin:14px 0}
+.hero h1 em{color:var(--green);font-style:italic;font-weight:500}
+.hero p{color:var(--muted);max-width:520px;margin:0 auto 26px}
+.btn{display:inline-block;background:var(--green-d);color:var(--bg);text-decoration:none;padding:12px 26px;border-radius:99px;font-weight:700}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.tl{border-left:2px solid var(--green);padding-left:22px;display:grid;gap:22px}
+.tl div{position:relative}
+.tl div::before{content:"";position:absolute;left:-29px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--green)}
+.yr{color:var(--green);font-weight:700;font-size:.85rem;letter-spacing:.1em}
+.tl h3{font-size:1.15rem}
+.tl p,.card p{margin:2px 0 0;color:var(--muted)}
+.tag{display:inline-block;background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:5px 14px;margin:4px 6px 4px 0;font-size:.9rem}
+.ph{border:2px dashed var(--line);border-radius:18px;padding:34px 20px;text-align:center;color:var(--muted)}
+.contact li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.contact{padding:0;margin:0}
+footer{text-align:center;color:var(--muted);padding:50px 20px 40px;font-size:.9rem}
+.about{display:grid;gap:24px;align-items:center;grid-template-columns:minmax(0,260px) 1fr}.about img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:22px;border:6px solid var(--surface);box-shadow:0 8px 24px rgba(0,0,0,.15)}@media(max-width:640px){.about{grid-template-columns:1fr}.about img{max-width:240px;margin:0 auto}}
+.certs{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.cert{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}.cert button{all:unset;display:block;cursor:zoom-in;width:100%}.cert img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top}.cert figcaption{padding:12px 14px}.cert figcaption b{display:block;font-size:.95rem}.cert figcaption span{color:var(--muted);font-size:.82rem}#lb{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.88);display:none;flex-direction:column;align-items:center;justify-content:center;padding:20px;color:#fff;text-align:center}#lb.on{display:flex}#lb img{max-width:100%;max-height:80vh;border-radius:8px}#lb p{margin:12px 0 0}
+.sub{font-size:1.3rem;margin:8px 0 14px;color:var(--green-d)}.sub:not(:first-of-type){margin-top:32px}.cert.tall img{aspect-ratio:3/4}
+.bul{margin:12px 0 0;padding-left:20px;color:var(--ink);font-size:.93rem}.bul li{margin:6px 0}
